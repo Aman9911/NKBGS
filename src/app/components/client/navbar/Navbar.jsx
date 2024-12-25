@@ -42,7 +42,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, controlNavbar]);
 
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");

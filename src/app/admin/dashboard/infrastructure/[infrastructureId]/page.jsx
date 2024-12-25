@@ -6,10 +6,10 @@ import { useRouter } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast'
 
-const infrastructureId = ({params}) => {
+const InfrastructureId = ({params}) => {
   const [infrastructure, setInfrastructure] = useState(null);
   const [isDisabled,setIsDisabled]=useState(false)
-  const id=params.infrastructureId
+  const id=params.infrastructureId 
   const router = useRouter()
 
   useEffect( () => {
@@ -18,7 +18,7 @@ const infrastructureId = ({params}) => {
         setInfrastructure(infraData);
       }
     });
-  }, []);
+  }, [id]);
 
   const onSubmit = async(data) => {
     setIsDisabled(true)
@@ -37,4 +37,4 @@ const infrastructureId = ({params}) => {
   )
 }
 
-export default infrastructureId
+export default InfrastructureId

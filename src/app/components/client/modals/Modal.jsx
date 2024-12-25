@@ -30,7 +30,7 @@ const Modal = ({
     setTimeout(() => {
       onClose();
     }, 300);
-  }, [disabled]);
+  }, [disabled,onClose]);
 
   if (!isOpen) {
     return null;

@@ -5,6 +5,7 @@ import pdfUploadService from "@/appwrite/pdfUploadService";
 import toast from "react-hot-toast";
 import { MdCancel } from "react-icons/md";
 import studentEnrichmentService from "@/appwrite/appwriteStudentEnrichment";
+import Image from "next/image";
 
 const StudentEnrichmentProgramePage = () => {
   const [development, setDevelopment] = useState([]);
@@ -60,7 +61,9 @@ const StudentEnrichmentProgramePage = () => {
           <div className="col-span-1 group" key={data.$id}>
             <div className="flex flex-col gap-2 w-full">
               <div className="aspect-square w-full relative overflow-hidden rounded-xl ">
-                <img
+                <Image
+                  width={1200}
+                  height={1200}
                   src="/images/PDF.png"
                   alt="list"
                   className="object-cover h-full w-full cursor-pointer"

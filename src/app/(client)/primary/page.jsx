@@ -301,7 +301,7 @@ const Primary = () => {
               Annual Examination.
             </li>
             <li>
-              Students entitled for Grace Marks will be declared 'Promoted' at
+              Students entitled for Grace Marks will be declared &apos;Promoted&apos; at
               the end of the session.
             </li>
           </ul>

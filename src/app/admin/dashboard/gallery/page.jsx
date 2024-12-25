@@ -10,6 +10,7 @@ import Input from "@/app/components/inputs/Input";
 import Button from "@/app/components/Button";
 import { AiOutlineClose } from "react-icons/ai";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Gallery = () => {
   const {
@@ -114,8 +115,10 @@ const Gallery = () => {
                     className="hover:cursor-pointer w-6"
                     onClick={() => handleDelete(data)}
                   />
-                  <img
-                    src={imageUploadService.getPreview(data.link[0])}
+                  <Image
+                  width={1200}
+                  height={1200}
+                    src={imageUploadService.getPreview(data.link[0]).href}
                     alt="modal"
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
                   />

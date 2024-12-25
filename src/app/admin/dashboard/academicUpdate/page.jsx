@@ -80,7 +80,7 @@ const AcademicUpdatePage = () => {
       }
     };
     fetchAcademicUpdate();
-  }, []);
+  }, [selectedClass]);
 
   const handleDelete = (data) => {
     if (data.$id) {

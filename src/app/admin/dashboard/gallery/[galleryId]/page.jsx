@@ -4,6 +4,7 @@ import ImageUpload from "@/app/components/inputs/ImageUpload";
 import Input from "@/app/components/inputs/Input";
 import galleryService from "@/appwrite/appwriteGallery";
 import imageUploadService from "@/appwrite/imageUploadService";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -29,7 +30,7 @@ const GalleryId = ({ params }) => {
         setValue("title", infraData.title);
       }
     });
-  }, []);
+  }, [id]);
 
   const handleFileChange = async (file) => {
     if (file) {
@@ -130,8 +131,10 @@ const GalleryId = ({ params }) => {
                   className="hover:cursor-pointer w-6"
                   onClick={() => handleDelete(data)}
                 />
-                <img
-                  src={imageUploadService.getPreview(data)}
+                <Image
+                  width={1200}
+                  height={1200}
+                  src={imageUploadService.getPreview(data).href}
                   alt="modal"
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />

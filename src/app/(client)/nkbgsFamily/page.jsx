@@ -2,6 +2,7 @@
 import Container from "@/app/components/client/Container";
 import nkbgsFamilyService from "@/appwrite/appwriteNkbgsFamily";
 import imageUploadService from "@/appwrite/imageUploadService";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const departmentPriority = [
@@ -82,11 +83,11 @@ const NkbgsFamily = () => {
                 <div className="flex flex-wrap gap-4 mt-2 ml-4 md:ml-8">
                   {Array.from({ length: 5 }).map((_, index) => (
                     <div
-                      className="flex flex-col gap-2 md:w-2/12 w-2/5 animate-pulse"
+                      className="flex flex-col gap-2 md:w-60 w-2/5 animate-pulse"
                       key={index}
                     >
                       <div className="aspect-square relative overflow-hidden rounded-xl">
-                        <img className="object-cover w-56 h-56 md:w-96 md:h-96 bg-slate-300 " />
+                        <div className="object-cover w-56 h-56 md:w-96 md:h-96 bg-slate-300 " />
                       </div>
                       <div className=" cursor-pointer text-center ">
                         <p className="text-lg font-semibold h-2 bg-slate-300 rounded mb-1"></p>
@@ -114,12 +115,14 @@ const NkbgsFamily = () => {
                 <div className="flex flex-wrap gap-4 mt-2 ml-4 md:ml-8">
                   {items.map((item) => (
                     <div
-                      className="flex flex-col gap-2 md:w-2/12 w-2/5 "
+                      className="flex flex-col gap-2 md:w-60 w-2/5 "
                       key={item.$id}
                     >
                       <div className="w-full relative overflow-hidden rounded-xl">
-                        <img
-                          src={imageUploadService.getPreview(item.file)}
+                        <Image
+                          height={1200}
+                          width={1200}
+                          src={imageUploadService.getPreview(item.file).href}
                           alt="list"
                           className="object-cover h-full w-full "
                         />

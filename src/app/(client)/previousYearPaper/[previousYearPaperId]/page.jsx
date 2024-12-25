@@ -19,7 +19,7 @@ const PreviousYearPaperId = ({ params }) => {
         setLoading(false);
       }
     });
-  }, []);
+  }, [id]);
 
   const groupBySession = (data) => {
     const grouped = data.reduce((acc, item) => {

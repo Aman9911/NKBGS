@@ -3,6 +3,7 @@ import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import toast from "react-hot-toast";
 import imageUploadService from "@/appwrite/imageUploadService";
+import Image from "next/image";
 
 const handleCopy = (event, text) => {
   event.preventDefault();
@@ -25,10 +26,14 @@ const Card = ({ modals, handleDelete }) => {
                 className="hover:cursor-pointer w-6"
                 onClick={() => handleDelete(modal)}
               />
-              <img
-                src={imageUploadService.getPreview(
-                  modal.image || modal.$id || modal
-                )}
+              <Image
+                width={1200}
+                height={1200}
+                src={
+                  imageUploadService.getPreview(
+                    modal.image || modal.$id || modal
+                  ).href
+                }
                 alt="modal"
                 className="h-full w-full object-cover object-center group-hover:opacity-75"
               />

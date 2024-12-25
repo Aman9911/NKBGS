@@ -2,6 +2,7 @@
 import Container from "@/app/components/client/Container";
 import nationalAndInternationalService from "@/appwrite/appwriteNationalAndInternational";
 import imageUploadService from "@/appwrite/imageUploadService";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const NationalAndInternationalDays = () => {
@@ -48,15 +49,17 @@ const NationalAndInternationalDays = () => {
                   </div>
                 </div>
               ))
-            : development.map((data) => (
+            : development?.map((data) => (
                 <div
                   className="rounded overflow-hidden shadow-lg flex flex-col"
                   key={data.$id}
                 >
                   <div className="relative">
-                    <img
+                    <Image
+                      width={1200}
+                      height={1200}
                       className="w-full"
-                      src={imageUploadService.getPreview(data.thumbnail)}
+                      src={imageUploadService.getPreview(data.thumbnail).href}
                       alt="Sunset in the mountains"
                     />
                     <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>

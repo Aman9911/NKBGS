@@ -93,7 +93,7 @@ const CbseResultForm = ({ cbse }) => {
       const currentYear = new Date().getFullYear();
       setSession(`${currentYear - 1}-${currentYear - 2000}`);
     }
-  }, []);
+  }, [cbse,setValue]);
 
   const handleSchoolTopper = (data) => {
     toggleCbseData("toppers", data);

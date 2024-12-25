@@ -51,7 +51,7 @@ const CommunityOutreachProgram = () => {
 
             <p className="mt-2 ">
               The Community Outreach Program organized by NKBGS exemplifies the
-              institution's commitment to fostering social responsibility among
+              institution&apos;s commitment to fostering social responsibility among
               its students. This initiative aims to bridge the gap between the
               school and the local community, encouraging students to engage
               with and support those in need. Through various activities such as

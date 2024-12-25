@@ -34,7 +34,7 @@ const Infra = ({ infrastructure, onSubmit, isDisabled }) => {
       setValue("editorContent", infrastructure.editorContent);
       setEditorContent(infrastructure.editorContent);
     }
-  }, [infrastructure]);
+  }, [infrastructure,setValue]);
 
   const handleFileChange = async (file) => {
     const image = file ? await imageUploadService.uploadFile(file) : null;

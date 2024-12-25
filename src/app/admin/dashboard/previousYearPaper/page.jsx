@@ -33,7 +33,7 @@ const PreviousYearPaperPage = () => {
         dispatch(getPaper(paper.documents))
       }
     })
-  },[])
+  },[dispatch])
 
   const handleSessionChange = (e) => {
     setSelectedSession(e.target.value)

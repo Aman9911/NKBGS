@@ -9,7 +9,7 @@ const ImageUpload = ({ onChange, value, visible = false }) => {
 
   useEffect(() => {
     onChange(value);
-  }, []);
+  }, [onChange,value]);
 
   return (
     <>

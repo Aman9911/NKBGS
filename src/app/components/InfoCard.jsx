@@ -3,6 +3,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { MdCancel } from "react-icons/md";
 import imageUploadService from "@/appwrite/imageUploadService";
+import Image from "next/image";
 
 const InfoCard = ({ data, handleOnDelete, path }) => {
   const thumbnail = imageUploadService.getPreview(data.thumbnail || data);
@@ -11,7 +12,9 @@ const InfoCard = ({ data, handleOnDelete, path }) => {
     <div className="col-span-1  group">
       <div className="flex flex-col gap-2 w-full">
         <div className="aspect-square w-full relative overflow-hidden rounded-xl ">
-          <img
+          <Image
+                    width={1200}
+                    height={1200}
             src={thumbnail.href}
             alt="list"
             className="object-cover h-full w-full "

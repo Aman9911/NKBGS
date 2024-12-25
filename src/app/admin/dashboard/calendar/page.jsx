@@ -5,6 +5,7 @@ import toast from "react-hot-toast";
 import { MdCancel } from "react-icons/md";
 import imageUploadService from "@/appwrite/imageUploadService";
 import calendarService from "@/appwrite/appwriteCalendar";
+import Image from "next/image";
 
 const Calendar = () => {
   const [development, setDevelopment] = useState([]);
@@ -59,7 +60,9 @@ const Calendar = () => {
           <div className="col-span-1 group" key={data.$id}>
             <div className="flex flex-col gap-2 w-full">
               <div className="aspect-square w-full relative overflow-hidden rounded-xl ">
-                <img
+                <Image
+                  width={1200}
+                  height={1200}
                   src="/images/PDF.png"
                   alt="list"
                   className="object-cover h-full w-full cursor-pointer"

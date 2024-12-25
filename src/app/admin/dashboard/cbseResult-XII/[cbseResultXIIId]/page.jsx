@@ -13,7 +13,7 @@ const CbseResultXIIId = ({ params }) => {
         setResult(data);
       }
     });
-  }, []);
+  }, [id]);
 
   return <>{result && <CbseResultFormXII cbse={result} />}</>;
 };

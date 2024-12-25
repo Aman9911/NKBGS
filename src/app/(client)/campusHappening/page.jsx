@@ -3,6 +3,7 @@ import Container from "@/app/components/client/Container";
 import Loader from "@/app/components/Loader";
 import campusHappeningService from "@/appwrite/appwriteCampusHappening";
 import imageUploadService from "@/appwrite/imageUploadService";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
 const CampusHappening = () => {
@@ -38,9 +39,11 @@ const CampusHappening = () => {
               {data.title}
             </h1>
             <div className="flex  justify-center ">
-              <img
+              <Image
+                        width={1200}
+                        height={1200}
                 className="md:w-3/4 aspect-video rounded-lg"
-                src={imageUploadService.getPreview(data.thumbnail)}
+                src={imageUploadService.getPreview(data.thumbnail).href}
                 alt="Sunset in the mountains"
               />
             </div>

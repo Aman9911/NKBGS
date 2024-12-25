@@ -5,6 +5,7 @@ import Input from "@/app/components/inputs/Input";
 import SelectBox from "@/app/components/inputs/SelectBox";
 import nkbgsFamilyService from "@/appwrite/appwriteNkbgsFamily";
 import imageUploadService from "@/appwrite/imageUploadService";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
@@ -64,7 +65,7 @@ const NkbgsFamilyPage = () => {
       await nkbgsFamilyService.createNkbgsFamily({ ...data, file: file?.$id });
       toast.success("Data uploaded successfully", { position: "top-right" });
       setToggle(!toggle);
-      setIsDisabled(false)
+      setIsDisabled(false);
     }
   };
 
@@ -159,8 +160,10 @@ const NkbgsFamilyPage = () => {
             <div className="col-span-1 group" key={data.$id}>
               <div className="flex flex-col gap-2 w-full">
                 <div className="aspect-square w-full relative overflow-hidden rounded-xl ">
-                  <img
-                    src={imageUploadService.getPreview(data.file)}
+                  <Image
+                    width={1200}
+                    height={1200}
+                    src={imageUploadService.getPreview(data.file).href}
                     alt="list"
                     className="object-cover h-full w-full "
                   />

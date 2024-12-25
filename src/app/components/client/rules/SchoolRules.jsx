@@ -45,7 +45,7 @@ const SchoolRules = () => {
           </li>
           <li>
             The school insists on the following measures to be observed by all
-            the students.Care must be taken to observe the "green rules" in
+            the students.Care must be taken to observe the &quot;green rules&quot; in
             order to maintain clean and green surroundings. That is, school
             premises will not be littered with disposable tumblers, papers or
             polythene bags.

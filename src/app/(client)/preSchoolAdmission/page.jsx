@@ -1,4 +1,5 @@
 import Container from "@/app/components/client/Container";
+import Image from "next/image";
 import React from "react";
 
 const PreSchoolAdmission = () => {
@@ -60,7 +61,7 @@ const PreSchoolAdmission = () => {
                 </ul>
               </div>
 
-              <img src="/images/admission.png" className="md:w-96" />
+              <Image width={1200} height={1200} alt="Admission" src="/images/admission.png" className="md:w-96" />
             </div>
           </div>
         </div>

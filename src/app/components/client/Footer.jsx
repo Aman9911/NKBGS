@@ -46,7 +46,7 @@ const Footer = () => {
         <div className="lg:w-[60%] text-center border-solid lg:flex lg:justify-center pt-1 gap-20 ">
           <div className="flex flex-col leading-8">
             <Link href="/contactUs">Contact Us</Link>
-            <Link href="/parentsFeedback">Parent's Feedback</Link>
+            <Link href="/parentsFeedback">Parent&apos;s Feedback</Link>
             <a>CBSE Links</a>
             <a>Syllabus - Classes(PS-XII)</a>
           </div>

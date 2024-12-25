@@ -17,7 +17,7 @@ const NationalAndInternationalId = ({params}) => {
         setInfrastructure(infraData);
       }
     });
-  }, []);
+  }, [id]);
 
   const onSubmit = async(data) => {
     const thumbnail = data.thumbnail instanceof File ? await imageUploadService.uploadFile(data.thumbnail) : data?.thumbnail;

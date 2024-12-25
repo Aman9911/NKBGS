@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Container from "@/app/components/client/Container";
 import eventsService from "@/appwrite/appwriteEvents";
 import pdfUploadService from "@/appwrite/pdfUploadService";
+import Image from "next/image";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -58,9 +59,11 @@ const Events = () => {
                   <p className="text-left text-xs pt-2 px-1 md:p-[2%] md:text-base text-white ">
                     {event.title}
                   </p>
-                  <img
+                  <Image
+                  height={100}
+                  width={40}
                     src="/images/PDF.png"
-                    alt="list"
+                    alt="pdf"
                     onClick={() => handleFilePreview(event.file)}
                     className="h-10 cursor-pointer mt-2 md:ml-8 md:mt-4 hover:-translate-y-1 md:transition md:ease-in-out"
                   />

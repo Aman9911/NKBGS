@@ -65,7 +65,9 @@ const HeroBanner = () => {
           <div className="text-xs sm:text-sm md:text-base hidden opacity-0 group-hover:inline group-hover:opacity-100 group-hover:bg-[#d3f3fc] text-[#008eff] p-2 rounded-lg transition-opacity duration-500 ease-in-out mr-2">
             360 View
           </div>
-          <img
+          <Image
+          width={1200}
+          height={1200}
             src="/images/360degree.gif"
             alt="360 Degree"
             className="cursor-pointer bg-white rounded-full hover:bg-white md:w-[70px] sm:w-[50px] w-[30px]"
@@ -81,7 +83,9 @@ const HeroBanner = () => {
           <div className="text-xs sm:text-sm md:text-base hidden opacity-0 group-hover:inline group-hover:opacity-100 group-hover:bg-[#d3f3fc] text-[#008eff] p-2 rounded-lg transition-opacity duration-500 ease-in-out mr-2">
             ERP Loing
           </div>
-          <img
+          <Image
+          width={1200}
+          height={1200}
             src="/images/login.gif"
             alt="360 Degree"
             className="cursor-pointer items-center bg-white rounded-full hover:bg-white md:w-[70px] sm:w-[50px] w-[30px]"

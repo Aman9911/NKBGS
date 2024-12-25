@@ -1,4 +1,5 @@
 import imageUploadService from "@/appwrite/imageUploadService";
+import Image from "next/image";
 import React from "react";
 
 const StudentCard = ({ data, tag }) => {
@@ -15,7 +16,10 @@ const StudentCard = ({ data, tag }) => {
   return (
     <div className="flex justify-center flex-col items-center py-1 relative w-[17rem]">
       {tag && (
-        <img
+        <Image
+          height={1200}
+          width={1200}
+          alt="positionTag"
           src={`/images/position/${
             data.position === 1
               ? "first.png"
@@ -27,9 +31,11 @@ const StudentCard = ({ data, tag }) => {
         />
       )}
 
-      <img
+      <Image
+        width={1200}
+        height={1200}
         className="inset-0 rounded-xl shadow-2xl z-0 h-60 w-52"
-        src={imageUploadService.getPreview(data?.photo)}
+        src={imageUploadService.getPreview(data?.photo).href}
         alt="Student image"
       />
       <p className="text-gray-700  text-xl font-bold leading-8">{data?.name}</p>

@@ -24,7 +24,7 @@ const AdmissionRules = () => {
             doctor.
           </li>
           <li>
-            Only those students will be put 'on duty' who represent the school
+            Only those students will be put &apos;on duty&apos; who represent the school
             while playing a tournament, a sport or participatein any other
             event. Any student, not representing the school, will have no such
             claim.

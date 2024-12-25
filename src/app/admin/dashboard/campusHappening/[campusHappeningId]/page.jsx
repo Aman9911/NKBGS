@@ -17,7 +17,7 @@ const CampusHappeningId = ({ params }) => {
         setInfrastructure(infraData);
       }
     });
-  }, []);
+  }, [id]);
 
   const onSubmit = async (data) => {
     const thumbnail =

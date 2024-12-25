@@ -17,7 +17,7 @@ const Data = ({params}) => {
        setLoading(false) 
       }
     });
-  },[])
+  },[id])
   
   if(loading){
     return <Loader/>

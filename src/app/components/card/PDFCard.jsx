@@ -4,6 +4,7 @@ import { MdCancel } from "react-icons/md";
 import toast from "react-hot-toast";
 import previousYearPaperService from "@/appwrite/appwritePreviousYearPaper";
 import pdfUploadService from "@/appwrite/pdfUploadService";
+import Image from "next/image";
 
 const PDFCard = ({ data, setPreviousPaper, previousPaper }) => {
   const handleOnDelete = async (data) => {
@@ -21,7 +22,9 @@ const PDFCard = ({ data, setPreviousPaper, previousPaper }) => {
     <div className="col-span-1  group">
       <div className="flex flex-col gap-2 w-full">
         <div className="aspect-square w-full relative overflow-hidden rounded-xl ">
-          <img
+          <Image
+            width={1200}
+            height={1200}
             src="/images/PDF.png"
             alt="list"
             className="object-cover h-full w-full cursor-pointer"

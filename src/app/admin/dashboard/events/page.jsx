@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import pdfUploadService from "@/appwrite/pdfUploadService";
 import eventsService from "@/appwrite/appwriteEvents";
 import { MdCancel } from "react-icons/md";
+import Image from "next/image";
 
 const AdminEvents = () => {
   const [isDisabled, setIsDisabled] = useState(false);
@@ -114,7 +115,9 @@ const AdminEvents = () => {
               <p className="text-left text-xs pt-2 px-1 md:p-[2%] md:text-base text-white ">
                 {event.title}
               </p>
-              <img
+              <Image
+              width={40}
+              height={1200}
                 src="/images/PDF.png"
                 alt="list"
                 className="h-10 cursor-pointer mt-2 md:ml-8 md:mt-4 hover:-translate-y-1 md:transition md:ease-in-out"

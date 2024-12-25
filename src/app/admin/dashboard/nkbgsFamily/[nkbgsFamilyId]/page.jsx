@@ -35,7 +35,7 @@ const departmentPriority = [
   { value: "Pre Primary Wing", label: "Pre Primary Wing" },
 ];
 
-const nkbgsFamilyId = ({ params }) => {
+const NkbgsFamilyId = ({ params }) => {
   const id = params.nkbgsFamilyId;
   const [thumbnailToggle, setThumbnailToggle] = useState(false);
   const [image, setImage] = useState([]);
@@ -59,7 +59,7 @@ const nkbgsFamilyId = ({ params }) => {
         setThumbnailToggle(true);
       }
     });
-  }, [setValue]);
+  }, [setValue,id]);
 
   const onSubmit = async (data) => {
     const file =
@@ -144,4 +144,4 @@ const nkbgsFamilyId = ({ params }) => {
   );
 };
 
-export default nkbgsFamilyId;
+export default NkbgsFamilyId;

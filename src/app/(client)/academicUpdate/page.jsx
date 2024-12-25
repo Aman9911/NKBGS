@@ -78,7 +78,7 @@ const AcademicUpdate = () => {
       }
     };
     fetchAcademicUpdate();
-  }, []);
+  }, [selectedClass]);
 
   return (
     <Container>

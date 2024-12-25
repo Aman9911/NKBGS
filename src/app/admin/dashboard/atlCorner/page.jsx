@@ -5,6 +5,7 @@ import pdfUploadService from "@/appwrite/pdfUploadService";
 import toast from "react-hot-toast";
 import { MdCancel } from "react-icons/md";
 import atlCornerService from "@/appwrite/appwriteAtlCorner";
+import Image from "next/image";
 
 const AtlCornerPage = () => {
   const [development, setDevelopment] = useState([]);
@@ -60,7 +61,9 @@ const AtlCornerPage = () => {
           <div className="col-span-1 group" key={data.$id}>
             <div className="flex flex-col gap-2 w-full">
               <div className="aspect-square w-full relative overflow-hidden rounded-xl ">
-                <img
+                <Image
+                  height={1200}
+                  width={1200}
                   src="/images/PDF.png"
                   alt="list"
                   className="object-cover h-full w-full cursor-pointer"
