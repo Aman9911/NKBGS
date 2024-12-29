@@ -42,7 +42,7 @@ const CalendarModal = ({ toggle, setToggle }) => {
         );
       }
     });
-  }, [setModals,monthNames]);
+  }, [setModals]);
 
   const onClose = () => {
     setToggle(false);

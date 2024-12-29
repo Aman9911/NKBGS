@@ -211,7 +211,7 @@ const CbseResultX = () => {
       {result.map(
         (item) =>
           item.session === selectedItem && (
-            <div key={item.$id} className="max-w-screen mx-auto p-5 sm:p-10  ">
+            <div key={item.$id} className="max-w-screen mx-auto p-5 sm:p-10 container ">
               <div className="mb-10 rounded overflow-hidden flex flex-col mx-auto">
                 <h1 className="text-xl text-center uppercase sm:text-4xl font-semibold text-indigo-600 transition duration-500 ease-in-out inline-block mb-2">
                   {item.heading}
