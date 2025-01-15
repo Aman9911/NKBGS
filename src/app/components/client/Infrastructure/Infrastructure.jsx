@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import Image from "next/image";
 import infrastructureService from "@/appwrite/appwriteInfrastructure";
 import imageUploadService from "@/appwrite/imageUploadService";
@@ -40,4 +40,4 @@ const Infrastructure = () => {
   );
 };
 
-export default Infrastructure;
+export default memo(Infrastructure);

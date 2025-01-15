@@ -1,8 +1,43 @@
+"use client";
 import Container from "@/app/components/client/Container";
+import Loader from "@/app/components/Loader";
+import admissionService from "@/appwrite/appwriteAdmission";
+import pdfUploadService from "@/appwrite/pdfUploadService";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 
 const PreSchoolAdmission = () => {
+  const [admission, setAdmission] = useState([]);
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    try {
+      admissionService.getAdmission().then((data) => {
+        if (data) {
+          setAdmission(data.documents.filter((id) => id.tag === null));
+          setLoading(false);
+        }
+      });
+    } catch (error) {
+      console.error("Fail to get Admission : ", error);
+      return error;
+    }
+  }, []);
+  const handleFilePreview = async (id) => {
+    try {
+      const fileDownload = await pdfUploadService.getFileDownload(id);
+      const blob = await fetch(fileDownload.href).then((res) => res.blob());
+      const url = URL.createObjectURL(blob);
+      if (url) {
+        window.open(url);
+      }
+    } catch (error) {
+      throw new Error("Sorry there is some issue in network", error);
+    }
+  };
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <Container>
       <div className="max-w-screen mx-auto p-5 sm:pt-5 sm:px-10">
@@ -15,27 +50,21 @@ const PreSchoolAdmission = () => {
               <div className="overflow-x-auto ">
                 <table className="md:w-full text-xs md:text-base border border-gray-800">
                   <tbody className="text-left">
-                    <tr className=" border-b border-gray-800">
-                      <td className="px-1 md:px-2 py-2 ">
-                        <span>Admission Policy for Pre School Admission</span>
-                      </td>
-                      <td className="px-1 md:px-2 py-2">
-                        <span className="cursor-pointer text-blue-600">
-                          Click to View
-                        </span>
-                      </td>
-                    </tr>
-                    <tr className=" border-b border-gray-800">
-                      <td className="px-1 md:px-2 py-2 ">
-                        <span>Distance Criteria</span>
-                      </td>
-                      <td className="px-1 md:px-2 py-2 ">
-                        <span className="cursor-pointer text-blue-600">
-                          Click to View
-                        </span>
-                      </td>
-                    </tr>
-
+                    {admission.map((item) => (
+                      <tr className="border-b border-gray-800" key={item.$id}>
+                        <td className="px-1 md:px-2 py-2 ">
+                          <span>{item.name}</span>
+                        </td>
+                        <td className="px-1 md:px-2 py-2">
+                          <span
+                            className="cursor-pointer text-blue-600"
+                            onClick={() => handleFilePreview(item.pdfData)}
+                          >
+                            Click to View
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
                     <tr className=" border-b border-gray-800">
                       <td className="px-1 md:px-2 py-2">
                         <span>
@@ -43,9 +72,14 @@ const PreSchoolAdmission = () => {
                         </span>
                       </td>
                       <td className="px-1 md:px-2 py-2 ">
-                        <span className="cursor-pointer text-blue-600">
-                          Click to Open
-                        </span>
+                        <Link
+                          href="https://nkbglobal.entab.info"
+                          target="_blank"
+                        >
+                          <span className="cursor-pointer text-blue-600">
+                            Click to Open
+                          </span>
+                        </Link>
                       </td>
                     </tr>
                   </tbody>
@@ -61,7 +95,13 @@ const PreSchoolAdmission = () => {
                 </ul>
               </div>
 
-              <Image width={1200} height={1200} alt="Admission" src="/images/admission.png" className="md:w-96" />
+              <Image
+                width={1200}
+                height={1200}
+                alt="Admission"
+                src="/images/admission.png"
+                className="md:w-96"
+              />
             </div>
           </div>
         </div>

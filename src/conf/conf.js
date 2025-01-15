@@ -27,6 +27,18 @@ const conf = {
     appwriteAchieverId:String(process.env.NEXT_PUBLIC_APPWRITE_ACHIEVER_ID),
     appwriteNinetyId:String(process.env.NEXT_PUBLIC_APPWRITE_NINETY_ID),
     appwriteSubjectWiseId:String(process.env.NEXT_PUBLIC_APPWRITE_SUBJECT_WISE_ID),
+    appwriteVacancyId:String(process.env.NEXT_PUBLIC_APPWRITE_VACANCY_ID),
+    appwriteProudMomentsId:String(process.env.NEXT_PUBLIC_APPWRITE_PROUD_MOMENTS_ID),
+    appwriteSportId:String(process.env.NEXT_PUBLIC_APPWRITE_SPORT_ID),
+    appwriteSportDetailId:String(process.env.NEXT_PUBLIC_APPWRITE_SPORT_DETAIL_ID),
+    appwriteExcursionsId:String(process.env.NEXT_PUBLIC_APPWRITE_EXCURSIONS_ID),
+    appwriteInternationalVisitId:String(process.env.NEXT_PUBLIC_APPWRITE_INTERNATIONALVISIT_ID),
+    appwriteValueEducationId:String(process.env.NEXT_PUBLIC_APPWRITE_VALUE_EDUCATION_ID),
+    appwriteWorkshopByPrincipalId:String(process.env.NEXT_PUBLIC_APPWRITE_WORKSHOP_BY_PRINCIPAL_ID),
+    appwriteSpecialEducationId:String(process.env.NEXT_PUBLIC_APPWRITE_SPECIAL_EDUCATION_ID),
+    appwriteClubId:String(process.env.NEXT_PUBLIC_APPWRITE_CLUB_ID),
+    appwriteClubDetailId:String(process.env.NEXT_PUBLIC_APPWRITE_CLUB_DETAIL_ID),
+    appwriteAdmissionId:String(process.env.NEXT_PUBLIC_APPWRITE_ADMISSION_ID),
     
 
     appwriteBucketId:String(process.env.NEXT_PUBLIC_APPWRITE_BUCKET_ID),

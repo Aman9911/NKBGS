@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { memo } from "react";
 import imageUploadService from "@/appwrite/imageUploadService";
 import useMediaQuery from "@/hooks/useMediaQuery";
 
@@ -61,4 +61,4 @@ const InfrastructureFullPage = ({ heading, content, pic, color }) => {
   );
 };
 
-export default InfrastructureFullPage;
+export default memo(InfrastructureFullPage);

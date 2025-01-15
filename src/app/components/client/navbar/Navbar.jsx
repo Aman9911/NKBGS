@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import Image from "next/image";
 import { Roboto } from "next/font/google";
 import NavLinks from "./NavLinks";
@@ -131,4 +131,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar);

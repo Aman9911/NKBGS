@@ -93,7 +93,7 @@ const PtaBody = () => {
   return (
     <Container>
       <div className="container p-2 mx-auto rounded-md sm:p-4 text-gray-800 ">
-        <h2 className="mb-6 text-2xl font-semibold leading-tight text-center text-green-600">
+        <h2 className="mb-6 text-2xl font-semibold leading-tight text-center text-indigo-600">
           Elected Members of PTA Body
         </h2>
         <div className="overflow-x-auto ">

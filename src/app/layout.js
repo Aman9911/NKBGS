@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           <HideNavbar>
             <Navbar />
           </HideNavbar>
-          <main className="bg-gray-200 text-gray-900">{children}</main>
+          <main className="bg-gray-200 text-gray-950">{children}</main>
           <HideNavbar>
             <Footer />
           </HideNavbar>

@@ -7,11 +7,14 @@ const SelectBox = ({
   register,
   errors,
   id,
+  classname,
   required,
 }) => {
   return (
     <div className="mb-4">
-      <label className="inline-block text-gray-700 text-sm md:text-lg font-bold mb-2 mr-2">
+      <label
+        className={`inline-block text-gray-700 text-sm md:text-lg font-bold mb-2 mr-2 ${classname}`}
+      >
         {label}
       </label>
       <select

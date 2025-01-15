@@ -1,7 +1,7 @@
-import Loader from "@/app/components/Loader";
+import AdminLoader from "@/app/components/AdminLoader";
 
 const loading = () => {
-  return <Loader />;
+  return <AdminLoader/>
 };
 
 export default loading;

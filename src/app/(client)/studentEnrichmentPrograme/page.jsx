@@ -46,7 +46,7 @@ const StudentEnrichmentPrograme = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="relative z-10 md:p-8 ">
           <div className="p-2 text-wrap bg-slate-100/50 rounded-md">
-            <h1 className="text-3xl  text-center font-bold">
+            <h1 className="text-3xl  text-center font-bold text-indigo-600">
               Student Enrichment Programe
             </h1>
             <p className="mt-2 ">

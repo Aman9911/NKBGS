@@ -21,9 +21,19 @@ const CampusHappeningPage = () => {
 
   const handleOnDelete = async (data) => {
     if (data) {
+      const editorContent = data.editorContent;
+      const regex = /https:\/\/cloud\.appwrite\.io\/v1\/storage\/buckets\/[a-z0-9]+\/files\/([a-z0-9]+)\//g;
+      const matches = editorContent.matchAll(regex);
+      const fileIds = Array.from(matches, match => match[1]);
+      const res = await Promise.all(fileIds.map(async(file)=>{
+        await imageUploadService.deleteFile(file)
+      }))
+      if(res){
+        await imageUploadService.deleteFile(data.thumbnail);
       await campusHappeningService.deleteCampusHappening(data.$id);
-      await imageUploadService.deleteFile(data.thumbnail);
       toast.success("Data deleted successfully", { position: "top-right" });
+      setInfrastructure(infrastructure.filter(excursion=>excursion.$id!==data.$id))
+      }
     }
   };
 

@@ -20,14 +20,13 @@ const AddPaper = ({ setPreviousPaper, previousPaper }) => {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data)
     setIsDisabled(true);
     if (data) {
       const fileData = paper ? await pdfUploadService.uploadFile(paper) : null;
       if (fileData) {
         const newData = await previousYearPaperService.createPreviousYearPaper({
           ...data,
-          class:data.class.toUpperCase(),
+          class: data.class.toUpperCase(),
           fileData: fileData.$id,
         });
         reset();

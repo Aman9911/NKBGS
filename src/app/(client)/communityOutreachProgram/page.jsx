@@ -45,15 +45,15 @@ const CommunityOutreachProgram = () => {
         <div className="absolute inset-0 bg-black opacity-30"></div>
         <div className="relative z-10 md:p-8 ">
           <div className="p-2 text-wrap bg-slate-100/50 rounded-md">
-            <h1 className="text-3xl  text-center font-bold">
+            <h1 className="text-3xl text-center font-bold text-indigo-600">
               Community Outreach Program
             </h1>
 
             <p className="mt-2 ">
               The Community Outreach Program organized by NKBGS exemplifies the
-              institution&apos;s commitment to fostering social responsibility among
-              its students. This initiative aims to bridge the gap between the
-              school and the local community, encouraging students to engage
+              institution&apos;s commitment to fostering social responsibility
+              among its students. This initiative aims to bridge the gap between
+              the school and the local community, encouraging students to engage
               with and support those in need. Through various activities such as
               workshops, health camps, and educational sessions, the program not
               only serves the community but also instills a sense of empathy and

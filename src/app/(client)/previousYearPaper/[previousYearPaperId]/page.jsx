@@ -60,7 +60,7 @@ const PreviousYearPaperId = ({ params }) => {
 
   return (
     <Container>
-      <div className="border-2 md:rounded-lg md:w-3/4 bg-[#2C5F2D] shadow-xl">
+      <div className="border-2 md:rounded-lg md:w-3/4 text-gray-950 bg-purple-500 shadow-xl">
         <div className="p-4">
           <h1 className="text-2xl font-bold ">Class {id}</h1>
 
@@ -69,7 +69,7 @@ const PreviousYearPaperId = ({ params }) => {
               <div className="p-2" key={session}>
                 <h2 className="text-lg font-bold">{session}</h2>
                 {session ? (
-                  <table className="table-auto min-w-full text-sm bg-[#97BC62]">
+                  <table className="table-auto min-w-full text-sm bg-purple-400">
                     <thead className="text-xs uppercase font-medium ">
                       <tr>
                         <th

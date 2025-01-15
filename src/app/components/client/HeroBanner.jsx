@@ -70,11 +70,11 @@ const HeroBanner = () => {
           height={1200}
             src="/images/360degree.gif"
             alt="360 Degree"
-            className="cursor-pointer bg-white rounded-full hover:bg-white md:w-[70px] sm:w-[50px] w-[30px]"
+            className="cursor-pointer bg-white rounded-full hover:bg-white md:w-[70px] w-[50px] "
           />
         </Link>
       </div>
-      <div className="fixed group right-0 sm:top-32 md:top-48 top-24 z-10 flex items-center">
+      <div className="fixed group right-0 top-32 md:top-48  z-10 flex items-center">
         <Link
           href="https://nkbglobal.entab.info"
           className="flex items-center"
@@ -88,7 +88,7 @@ const HeroBanner = () => {
           height={1200}
             src="/images/login.gif"
             alt="360 Degree"
-            className="cursor-pointer items-center bg-white rounded-full hover:bg-white md:w-[70px] sm:w-[50px] w-[30px]"
+            className="cursor-pointer items-center bg-white rounded-full hover:bg-white md:w-[70px] w-[50px]"
           />
         </Link>
       </div>

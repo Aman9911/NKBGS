@@ -73,7 +73,7 @@ const TeacherCareAndDevelopmentPage = () => {
                   <MdCancel size={20} onClick={(e) => handleDelete(data)} />
                 </div>
               </div>
-              <div className="font-semibold text-base text-center cursor-pointer">
+              <div className="font-semibold text-base text-center">
                 {data.name.split(".")[0]}
               </div>
             </div>

@@ -33,7 +33,7 @@ const Photo = () => {
                   key={index}
                   className="shadow-2xl border border-blue-300 animate-pulse w-[314px] md:w-[356px] mb-14 relative rounded-xl md:hover:-translate-y-2 md:transition md:ease-in-out "
                 >
-                  <div className="inset-0 w-[356px] h-[275px] bg-slate-200 rounded-xl shadow-2xl  z-0 " />
+                  <div className="inset-0 w-full h-[275px] bg-slate-200 rounded-xl shadow-2xl  z-0 " />
                   <div className="md:flex md:mt-0 pt-1 w-full cursor-pointer uppercase text-lg md:text-2xl justify-center items-center md:opacity-0 md:ease-in-out md:duration-100 hover:opacity-100 hover:bg-black/50 hover:rounded-xl md:text-white md:inset-0 text-center z-30 absolute animate-bounce sm:animate-none"></div>
                 </div>
               ))}
@@ -61,7 +61,7 @@ const Photo = () => {
                     alt="infra"
                     width={2560}
                     height={1440}
-                    className="inset-0 w-[356px] h-[275px]  rounded-xl shadow-2xl  z-0 "
+                    className="inset-0 w-full h-[275px]  rounded-xl shadow-2xl  z-0 "
                     priority={true}
                   />
                   <div className="md:flex md:mt-0 pt-1 w-full cursor-pointer uppercase text-lg md:text-2xl justify-center items-center md:opacity-0 md:ease-in-out md:duration-100 hover:opacity-100 hover:bg-black/50 hover:rounded-xl md:text-white md:inset-0 text-center z-30 absolute animate-bounce sm:animate-none">

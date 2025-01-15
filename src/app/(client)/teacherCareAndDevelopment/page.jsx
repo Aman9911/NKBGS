@@ -37,9 +37,9 @@ const TeacherCareAndDevelopment = () => {
     <Container>
       <div className="relative min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/images/heroBanner/building.png')",backgroundAttachment:"fixed",backgroundSize:'cover' }}>
       <div className="absolute inset-0 bg-black opacity-30"></div>
-      <div className="relative z-10 md:p-8 ">
+      <div className="relative z-10 md:p-8 text-gray-950">
       <div className='p-2 text-wrap bg-slate-100/50 rounded-md'>
-        <h1 className='text-3xl  text-center font-bold'>Teacher Care And Development</h1>
+        <h1 className='text-3xl text-center font-bold text-indigo-600'>Teacher Care And Development</h1>
         
         <p className='mt-2 '>
         At NKBGS, we understand that the growth of our students is intricately linked to the development of our teachers. Our commitment to teacher care and development is reflected in a robust framework of ongoing professional learning. We regularly organize workshops and seminars that cover a wide range of topics, from innovative teaching strategies to emotional intelligence in the classroom. These sessions not only equip our educators with the latest pedagogical tools but also foster a sense of community among them, encouraging collaboration and the sharing of best practices.

@@ -1,7 +1,35 @@
+"use client";
 import Container from "@/app/components/client/Container";
-import React from "react";
+import admissionService from "@/appwrite/appwriteAdmission";
+import pdfUploadService from "@/appwrite/pdfUploadService";
+import React, { useEffect, useState } from "react";
 
 const AdmissionProcess = () => {
+  const [admission, setAdmission] = useState([]);
+  useEffect(() => {
+    try {
+      admissionService.getAdmission().then((data) => {
+        if (data) {
+          setAdmission(data.documents.filter((id) => id.tag !== null));
+        }
+      });
+    } catch (error) {
+      console.error("Fail to get Admission : ", error);
+      return error;
+    }
+  }, []);
+  const handleFilePreview = async (id) => {
+    try {
+      const fileDownload = await pdfUploadService.getFileDownload(id);
+      const blob = await fetch(fileDownload.href).then((res) => res.blob());
+      const url = URL.createObjectURL(blob);
+      if (url) {
+        window.open(url);
+      }
+    } catch (error) {
+      throw new Error("Sorry there is some issue in network", error);
+    }
+  };
   return (
     <Container>
       <div className="max-w-screen mx-auto p-5 sm:pt-5 sm:px-10">
@@ -47,16 +75,21 @@ const AdmissionProcess = () => {
             <h1 className="font-semibold text-xl text-indigo-600 ">
               Important links
             </h1>
-
             <p>
               <span className="font-semibold text-black">Pre-School :</span>{" "}
-              <span className="cursor-pointer text-blue-600">
+              <span
+                className="cursor-pointer text-blue-600"
+                onClick={() => handleFilePreview(admission[0].pdfData)}
+              >
                 Registration & Admission Criteria 2025-26
               </span>
             </p>
             <p>
               <span className="font-semibold text-black">Class I-XI :</span>{" "}
-              <span className="cursor-pointer text-blue-600">
+              <span
+                className="cursor-pointer text-blue-600"
+                onClick={() => handleFilePreview(admission[1].pdfData)}
+              >
                 Registration & Admission Criteria 2025-26
               </span>
             </p>
@@ -66,5 +99,4 @@ const AdmissionProcess = () => {
     </Container>
   );
 };
-
 export default AdmissionProcess;

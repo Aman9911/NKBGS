@@ -39,10 +39,8 @@ const filters = [
     id: "admission",
     name: "Admission",
     options: [
-      { value: "admissionProcess", label: "Admission Process", checked: false },
-      { value: "admissionEnquiry", label: "Admission Enquiry", checked: false },
       {
-        value: "preSchoolAdmission",
+        value: "admission",
         label: "Pre School Admission",
         checked: false,
       },
@@ -58,10 +56,6 @@ const filters = [
         checked: false,
       },
       { value: "academicUpdate", label: "Academic Update", checked: false },
-      { value: "primary", label: "Primary", checked: false },
-      { value: "middle", label: "Middle", checked: false },
-      { value: "secondary", label: "Secondary", checked: false },
-      { value: "seniorSecondary", label: "Senior Secondary", checked: false },
       { value: "cbseResult-X", label: "Class X CBSE Result", checked: false },
       {
         value: "cbseResult-XII",
@@ -75,6 +69,46 @@ const filters = [
     name: "Beyond Curriculum",
     options: [
       {
+        value: "proudMoments",
+        label: "Proud Moments",
+        checked: false,
+      },
+      {
+        value: "teacherCareAndDevelopment",
+        label: "Teacher Care And Development",
+        checked: false,
+      },
+      {
+        value: "internationalVisit",
+        label: "International Visit",
+        checked: false,
+      },
+      {
+        value: "workshopByPrincipal",
+        label: "Workshop By Principal",
+        checked: false,
+      },
+      {
+        value: "excursions",
+        label: "Excursions",
+        checked: false,
+      },
+      {
+        value: "sports",
+        label: "Sports",
+        checked: false,
+      },
+      {
+        value: "clubs",
+        label: "Clubs",
+        checked: false,
+      },
+      {
+        value: "specialEducation",
+        label: "Special Education",
+        checked: false,
+      },
+      {
         value: "studentEnrichmentPrograme",
         label: "Student Enrichment Programe",
         checked: false,
@@ -82,6 +116,11 @@ const filters = [
       {
         value: "communityOutreachProgram",
         label: "Community Outreach Program",
+        checked: false,
+      },
+      {
+        value: "valueEducation",
+        label: "Value Education",
         checked: false,
       },
       { value: "eNewsLetter", label: "E-Newsletter", checked: false },
@@ -99,11 +138,6 @@ const filters = [
     id: "faculty",
     name: "Faculty",
     options: [
-      {
-        value: "teacherCareAndDevelopment",
-        label: "Teacher Care And Development",
-        checked: false,
-      },
       { value: "nkbgsFamily", label: "NKBGS Family", checked: false },
       { value: "vacancy", label: "Vacancy", checked: false },
     ],

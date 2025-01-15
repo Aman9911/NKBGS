@@ -67,7 +67,7 @@ const Infra = ({ infrastructure, onSubmit, isDisabled }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 mt-2">
         <Input
           id="title"
           label="Title"

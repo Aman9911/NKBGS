@@ -47,13 +47,13 @@ const Footer = () => {
           <div className="flex flex-col leading-8">
             <Link href="/contactUs">Contact Us</Link>
             <Link href="/parentsFeedback">Parent&apos;s Feedback</Link>
-            <a>CBSE Links</a>
-            <a>Syllabus - Classes(PS-XII)</a>
+            <Link href="/campusHappening">Campus Happening</Link>
+            <Link href="/academicUpdate">Academic Updates</Link>
           </div>
           <div className="flex flex-col leading-8 ">
             <Link href="/cbseResult-X">Class X CBSE Result</Link>
             <Link href="/cbseResult-XII">Class XII CBSE Result</Link>
-            <Link href="/infrastructure/TRANSPORT">Transport</Link>
+            <Link href="/proudMoments">Proud Moments</Link>
             <Link href="/gallery/photo">Photo Gallery</Link>
           </div>
         </div>

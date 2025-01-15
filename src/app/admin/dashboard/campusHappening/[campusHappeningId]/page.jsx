@@ -1,4 +1,5 @@
 "use client";
+import Button from "@/app/components/Button";
 import Infra from "@/app/components/Infra";
 import campusHappeningService from "@/appwrite/appwriteCampusHappening";
 import imageUploadService from "@/appwrite/imageUploadService";
@@ -35,9 +36,18 @@ const CampusHappeningId = ({ params }) => {
   };
 
   return (
-    <div>
+    <>
+      <div className="text-right">
+        <Button
+          label="Cancel"
+          small
+          onClick={() => {
+            router.push('/admin/dashboard/campusHappening')
+          }}
+        />
+      </div>
       <Infra infrastructure={infrastructure} onSubmit={onSubmit} />
-    </div>
+    </>
   );
 };
 

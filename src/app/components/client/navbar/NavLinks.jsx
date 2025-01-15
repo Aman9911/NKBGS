@@ -1,7 +1,7 @@
 "use client";
 import infrastructureService from "@/appwrite/appwriteInfrastructure";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
 
 const links = [
@@ -27,30 +27,6 @@ const links = [
         submenu: false,
         sublink: [{ name: "", link: "/" }],
       },
-      // {
-      //   Head: "Information about the school",
-      //   link: "/informationAboutTheSchool",
-      //   submenu: false,
-      //   sublink: [{ name: "", link: "/" }],
-      // },
-      // {
-      //   Head: "List of Mandatory Committees",
-      //   link: "/listOfMandatoryCommittees",
-      //   submenu: false,
-      //   sublink: [{ name: "", link: "/" }],
-      // },
-      // {
-      //   Head: "Mandatory Public Disclosure",
-      //   link: "/mandatoryPublicDisclosure",
-      //   submenu: false,
-      //   sublink: [{ name: "", link: "/" }],
-      // },
-      // {
-      //   Head: "Books & Uniform",
-      //   link: "/booksAndUniform",
-      //   submenu: false,
-      //   sublink: [{ name: "", link: "/" }],
-      // },
       {
         Head: "Infrastructure",
         link: "",
@@ -163,20 +139,8 @@ const links = [
         ],
       },
       {
-        Head: "Competetive Exams",
-        link: "/competetiveExams",
-        submenu: false,
-        sublink: [{ name: "", link: "/" }],
-      },
-      {
         Head: "Academic Update",
         link: "/academicUpdate",
-        submenu: false,
-        sublink: [{ name: "", link: "/" }],
-      },
-      {
-        Head: "Transfer Certificate",
-        link: "/transferCertificate",
         submenu: false,
         sublink: [{ name: "", link: "/" }],
       },
@@ -187,8 +151,8 @@ const links = [
     submenu: true,
     sublinks: [
       {
-        Head: "Inter school COMPETITIONS",
-        link: "/interSchoolCompetitions",
+        Head: "Proud Moments",
+        link: "/proudMoments",
         submenu: false,
         sublink: [{ name: "", link: "/" }],
       },
@@ -255,12 +219,6 @@ const links = [
       {
         Head: "Value Education",
         link: "/valueEducation",
-        submenu: false,
-        sublink: [{ name: "", link: "/" }],
-      },
-      {
-        Head: "ISA Corner",
-        link: "/IsaCorner",
         submenu: false,
         sublink: [{ name: "", link: "/" }],
       },
@@ -487,4 +445,4 @@ const NavLinks = ({ open, setOpen }) => {
   );
 };
 
-export default NavLinks;
+export default memo(NavLinks);

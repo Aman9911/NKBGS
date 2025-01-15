@@ -26,7 +26,7 @@ const Video = () => {
                 >
                   <iframe
                     alt="infra"
-                    className="inset-0 animate-pulse bg-slate-200 w-[356px] h-[275px]  rounded-xl shadow-2xl  z-0  "
+                    className="inset-0 animate-pulse bg-slate-200 w-full h-[275px]  rounded-xl shadow-2xl  z-0  "
                   ></iframe>
                 </div>
               ))}
@@ -38,7 +38,7 @@ const Video = () => {
   }
   return (
     <div className="relative mt-6 lg:mx-[5%]">
-      <div className="space-x-0 space-y-4  mx-auto flex flex-col justify-center items-center md:flex-row md:flex-wrap md:space-y-2 md:space-x-2 ">
+      <div className="space-x-0 space-y-4 mx-auto flex flex-col justify-center items-center md:flex-row md:flex-wrap md:space-y-2 md:space-x-2 ">
         <div className="relative  text-center">
           <div className="md:flex md:gap-x-8 md:px-3 md:flex-wrap md:justify-center md:items-center">
             {infrastructure?.map((infra) => (
@@ -51,7 +51,7 @@ const Video = () => {
                   alt="infra"
                   width={2560}
                   height={1440}
-                  className="inset-0 w-[356px] h-[275px]  rounded-xl shadow-2xl  z-0  "
+                  className="inset-0 w-full h-[275px] rounded-xl shadow-2xl z-0"
                 ></iframe>
                 <div className="truncate overflow-hidden text-ellipsis hover:whitespace-normal pt-1 w-full cursor-pointer uppercase text-lg justify-center items-center text-center z-30 absolute">
                   {infra.title}
