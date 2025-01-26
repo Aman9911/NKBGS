@@ -1,5 +1,8 @@
 import Container from "@/app/components/client/Container";
-import React from "react";
+
+export const metadata = {
+  title: "Primary",
+};
 
 const Primary = () => {
   return (
@@ -301,8 +304,8 @@ const Primary = () => {
               Annual Examination.
             </li>
             <li>
-              Students entitled for Grace Marks will be declared &apos;Promoted&apos; at
-              the end of the session.
+              Students entitled for Grace Marks will be declared
+              &apos;Promoted&apos; at the end of the session.
             </li>
           </ul>
           <h4 className="text-base font-semibold underline mt-4">

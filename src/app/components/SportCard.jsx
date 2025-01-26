@@ -9,8 +9,8 @@ const SportCard = ({ id, image, title, handleOnDelete, path }) => {
   const img = imageUploadService.getPreview(image);
   const router = useRouter();
   return (
-    <div className="col-span-1  group">
-      <div className="flex flex-col gap-2 w-full ">
+    <div className="col-span-1 group">
+      <div className="flex flex-col gap-2 w-full p-2 md:p-0">
         <div className="aspect-square w-full relative overflow-hidden rounded-xl ">
           <Image
             width={1200}

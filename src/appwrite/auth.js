@@ -85,6 +85,31 @@ export class AuthService {
       throw error;
     }
   }
+
+  async sendRecoveryEmail(email) {
+    try {
+      const response = await this.account.createRecovery(
+        email,
+        `${conf.url}/admin/reset_password_form`
+      );
+      return response;
+    } catch (error) {
+      console.error("Error sending recovery email:", error);
+    }
+  }
+
+  async resetPassword(userId, secret, password) {
+    try {
+      const response = await this.account.updateRecovery(
+        userId,
+        secret,
+        password
+      );
+      return response;
+    } catch (error) {
+      console.error("Error updating password:", error);
+    }
+  }
 }
 
 const authService = new AuthService();

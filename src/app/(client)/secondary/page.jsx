@@ -1,5 +1,8 @@
 import Container from "@/app/components/client/Container";
-import React from "react";
+
+export const metadata = {
+  title: "Secondary",
+};
 
 const Secondary = () => {
   return (

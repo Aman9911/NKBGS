@@ -1,7 +1,5 @@
 import Container from "@/app/components/client/Container";
 
-import React from "react";
-
 const PtaBodyData = [
   {
     class: "Pre School",
@@ -88,6 +86,10 @@ const PtaBodyData = [
     email: "rony.mony@gmail.com",
   },
 ];
+
+export const metadata = {
+  title: "PTA Body",
+};
 
 const PtaBody = () => {
   return (

@@ -1,6 +1,9 @@
 import Container from "@/app/components/client/Container";
 import Image from "next/image";
-import React from "react";
+
+export const metadata = {
+  title: "CCE And CBSE Initiatives",
+};
 
 const CceAndCbseInitiatives = () => {
   return (

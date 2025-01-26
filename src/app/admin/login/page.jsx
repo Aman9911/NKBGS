@@ -9,6 +9,7 @@ import authService from "@/appwrite/auth";
 import { useDispatch } from "react-redux";
 import { login as authLogin } from "@/store/authSlice";
 import toast from "react-hot-toast";
+import Link from "next/link";
 
 const Admin = () => {
   const {
@@ -73,7 +74,6 @@ const Admin = () => {
                       message: "Email not valid",
                     },
                   })}
-                  type="email"
                   className="block w-full rounded-md border-0 py-1.5 px-1 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
                 {errors.email && (
@@ -91,12 +91,12 @@ const Admin = () => {
                   Password
                 </label>
                 <div className="text-sm">
-                  <a
-                    href="/forgot_password"
+                  <Link
+                    href="/admin/forgot_password"
                     className="font-semibold text-indigo-600 hover:text-indigo-500"
                   >
                     Forgot password?
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="mt-2">

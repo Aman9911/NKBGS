@@ -17,6 +17,10 @@ const PFData = [
   },
 ];
 
+export const metadata = {
+  title: "Parent's Feedback",
+};
+
 const ParentsFeedback = () => {
   return (
     <Container>
