@@ -58,7 +58,7 @@ const Photo = () => {
                 >
                   <Image
                     src={imageUploadService.getPreview(infra.link[0]).href}
-                    alt="infra"
+                    alt="photo"
                     width={2560}
                     height={1440}
                     className="inset-0 w-full h-[275px]  rounded-xl shadow-2xl  z-0 "

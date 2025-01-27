@@ -11,7 +11,6 @@ import conf from "@/conf/conf";
 
 const ForgotPassword = () => {
   const [isDisabled, setIsDisabled] = useState(false);
-  console.log("conf.url:", conf.url);
   const {
     register,
     handleSubmit,

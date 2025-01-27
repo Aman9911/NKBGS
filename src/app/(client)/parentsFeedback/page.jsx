@@ -40,7 +40,7 @@ const ParentsFeedback = () => {
                   height={1200}
                   className="md:w-1/4 rounded-lg"
                   src={data.photo}
-                  alt="Sunset in the mountains"
+                  alt="feedback"
                 />
               )}
               {data.link && (

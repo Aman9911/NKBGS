@@ -64,7 +64,7 @@ const Calendar = () => {
                   width={1200}
                   height={1200}
                   src="/images/PDF.png"
-                  alt="list"
+                  alt="calendar"
                   className="object-cover h-full w-full cursor-pointer"
                   onClick={(e) => handleFilePreview(data.link)}
                 />

@@ -29,7 +29,7 @@ const CceAndCbseInitiatives = () => {
           <Image
             width={1200}
             height={1200}
-            alt="Admission"
+            alt="CCE"
             src="/images/cce.png"
             className="md:w-auto "
           />

@@ -87,7 +87,6 @@ export class AuthService {
   }
 
   async sendRecoveryEmail(email) {
-    console.log("conf.url:", conf.url);
     try {
       const response = await this.account.createRecovery(
         email,
