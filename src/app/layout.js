@@ -57,7 +57,13 @@ export const metadata = {
     "Affordable school fees",
   ],
   openGraph: {
-    title: "NKBGS | N.K Bagrodia Global School",
+    title: {
+      template: `%s | NKBGS | N.K Bagrodia Global School`,
+      default: "NKBGS | N.K Bagrodia Global School",
+    },
+    url: "https://nkbgs.vercel.app/",
+    type: "website",
+    siteName: "NKBGS | N.K Bagrodia Global School",
     images: [
       {
         url: "/api/og?title=NKBGS+|+N.K+Bagrodia+Global+School",
