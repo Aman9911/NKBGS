@@ -7,9 +7,11 @@ import { useForm } from "react-hook-form";
 import authService from "@/appwrite/auth";
 import toast from "react-hot-toast";
 import Link from "next/link";
+import conf from "@/conf/conf";
 
 const ForgotPassword = () => {
   const [isDisabled, setIsDisabled] = useState(false);
+  console.log("conf.url:", conf.url);
   const {
     register,
     handleSubmit,
@@ -38,7 +40,7 @@ const ForgotPassword = () => {
           <Image
             className="mx-auto h-18 w-auto"
             src={logo}
-            alt="Your Company"
+            alt="logo"
             width={2500}
             height={2500}
           />
