@@ -4,6 +4,9 @@ import Carousel from "./components/client/Carousel";
 import Message from "./components/client/Message";
 import UpcomingEvents from "./components/client/UpcomingEvents";
 import Infrastructure from "./components/client/Infrastructure/Infrastructure";
+import Life from "./components/client/Life";
+import Feedback from "./components/Feedback";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,6 +20,11 @@ export default function Home() {
           <Carousel />
         </div>
       </div>
+      <div className="mt-16 relative">
+      <div className="space-x-0 space-y-4 max-w-[1200px] mx-auto flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:space-y-2 sm:space-x-2 gap-6">
+      <Life/>
+      </div>
+      </div>      
       <div className="lg:flex lg:mx-[5%] mt-5 h-full">
         <div className="lg:max-w-[70%] ">
           <Message
@@ -27,6 +35,11 @@ export default function Home() {
           />
         </div>
         <UpcomingEvents />
+      </div>
+      <div className="mt-16 relative">
+      <div className="space-x-0 space-y-4 max-w-[1200px] mx-auto flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:space-y-2 sm:space-x-2 gap-6">
+      <Feedback/>
+      </div>
       </div>
       <div className="relative mt-12 lg:mx-[5%]">
         <div className="space-x-0 space-y-4  mx-auto flex flex-col justify-center items-center md:flex-row md:flex-wrap md:space-y-2 md:space-x-2 ">
@@ -40,6 +53,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="mt-6 relative">
+      <div className="space-x-0 space-y-4 max-w-[1200px] mx-auto flex flex-col justify-center items-center sm:flex-row sm:flex-wrap sm:space-y-2 sm:space-x-2 gap-6">
+      <Image src="/images/design.png" alt="footer design" className="object-center" width={1024} height={1024} />
+    </div>
+    </div>
     </div>
   );
 }

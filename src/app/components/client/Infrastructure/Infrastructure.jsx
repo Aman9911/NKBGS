@@ -19,8 +19,9 @@ const Infrastructure = () => {
     <>
       {infrastructure?.map((infra) => (
         <div
+        data-aos="flip-up"
           key={infra.$id}
-          className="shadow-2xl w-[314px] md:w-[356px] mb-14 relative rounded-xl md:hover:-translate-y-2 md:transition md:ease-in-out "
+          className="shadow-2xl w-[314px] md:w-[356px] mb-14 relative rounded-xl md:hover:-translate-y-2 md:transition md:ease-in-out aos-init"
         >
           <Link href={`/infrastructure/${infra.title.replace(" ", "_")}`}>
             <Image

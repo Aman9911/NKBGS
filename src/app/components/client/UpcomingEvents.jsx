@@ -15,7 +15,7 @@ const UpcomingEvents = () => {
   }, []);
 
   return (
-    <div className="relative text-center shadow-2xl rounded-xl overflow-hidden border-white border-2 m-4 lg:max-w-[30%] bg-teal-400/40">
+    <div data-aos="fade-left" className="relative text-center shadow-2xl rounded-xl overflow-hidden border-white border-2 m-4 lg:max-w-[30%] bg-teal-400/40 aos-init">
       <div className="text-xl md:text-2xl font-bold py-2 z-40 relative shadow-2xl bg-teal-100">
         News & Upcoming Events
       </div>

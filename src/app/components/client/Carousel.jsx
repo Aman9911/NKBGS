@@ -79,8 +79,9 @@ const Carousel = () => {
       <CalendarModal toggle={toggle} setToggle={setToggle} />
       {carouselItems.map((item, index) => (
         <div
-          className="flex flex-col justify-center h-[200px] w-[314px] md:w-[360px] items-center border border-md rounded-xl text-black md:ml-2 md:mt-2 backdrop-blur-3xl bg-yellow-100 backdrop-brightness-200 shadow-xl"
-          key={item.id}
+        className="flex flex-col justify-center h-[200px] w-[314px] md:w-[360px] items-center border border-md rounded-xl text-black md:ml-2 md:mt-2 backdrop-blur-3xl bg-yellow-100 backdrop-brightness-200 shadow-xl aos-init"
+        key={item.id}
+        data-aos="fade-up"
         >
           <h3 className="text-lg pb-4 md:text-xl text-center ">{item.title}</h3>
           <button className="pb-4 ">

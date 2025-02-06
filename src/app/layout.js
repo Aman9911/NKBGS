@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import Navbar from "./components/client/navbar/Navbar";
 import HideNavbar from "./components/client/HideNavbar";
 import Footer from "./components/client/Footer";
+import ClientOnlyAOS from "./components/client/ClientOnlyAOS";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -66,7 +67,8 @@ export const metadata = {
     siteName: "NKBGS | N.K Bagrodia Global School",
     images: [
       {
-        url: "/api/og?title=NKBGS+|+N.K+Bagrodia+Global+School",
+        // url: "/api/og?title=NKBGS+|+N.K+Bagrodia+Global+School",
+        url:"https://nkbgs.vercel.app/images/og.png",
         width: 1200,
         height: 630,
       },
@@ -82,6 +84,7 @@ export default function RootLayout({ children }) {
           <HideNavbar>
             <Navbar />
           </HideNavbar>
+          <ClientOnlyAOS />
           <main className="bg-gray-200 text-gray-950">{children}</main>
           <HideNavbar>
             <Footer />

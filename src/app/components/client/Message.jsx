@@ -4,7 +4,7 @@ import imageUploadService from "@/appwrite/imageUploadService";
 
 const Message = ({ heading, content, pic, writer, color }) => {
   return (
-    <div className="relative">
+    <div className="relative aos-init" data-aos="fade-right">
       <div
         className={`border-2  shadow-xl m-4 rounded-xl border-white ${
           color ? color : "bg-teal-400/40"
