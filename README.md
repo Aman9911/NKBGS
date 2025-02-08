@@ -9,7 +9,7 @@ A modern, responsive school website built using Next.js, Tailwind CSS, and Appwr
 ## 📖 Table of Contents
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
+- [Live Demo](#live-demo)
 
 
 ## 🚀 Features
@@ -24,19 +24,14 @@ A modern, responsive school website built using Next.js, Tailwind CSS, and Appwr
 - **Backend:** Appwrite (Database, Authentication, Storage)
 - **Other:** Vercel (Deployment)
 
-## 📁 Project Structure
 
-NKBGS/
-│── public/             # Static assets
-│── src/
-│   │── app/            # Next.js pages (routes)
-│   │    ├──(client)/   # Next.js pages (for clients)
-│   │    ├──admin/      # Next.js pages (for admin)
-│   │    ├──components/ # Reusable UI components
-│   │    ├──globals.css # Tailwind CSS styles
-│   │── appwrite/       # Appwrite connection functions
-│   │── hooks/          # React hooks
-│   │── pages/          # API's
-│── .env.local          # Environment variables (not shared)
-│── package.json        # Dependencies
-│── README.md           # Project documentation
+## 🚀 Live Demo
+
+### Client Side:
+Check out the **Client Side** of the website here:  
+[Visit Client Side](https://nkbgs.vercel.app)
+
+### Admin Panel:
+Check out the **Admin Panel** here:  
+[Visit Admin Panel](https://nkbgs.vercel.app/admin/login)
+
